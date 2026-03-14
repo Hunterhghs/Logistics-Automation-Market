@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistics Automation Market Data 2026 — H Heuristics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Formula / Info Bar -->
+    <div class="formula-bar">
+        <div class="formula-bar-left">
+            <div class="cell-ref" id="cellRef">A1</div>
+            <div class="fx-label">fx</div>
+            <div class="formula-display" id="formulaDisplay"></div>
+        </div>
+        <div class="formula-bar-right">
+            <div class="search-box">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                <input type="text" id="searchInput" placeholder="Find in sheet...">
+                <span id="searchCount" class="search-count"></span>
+            </div>
+            <a href="Logistics_Automation_Market_Data_2026.xlsx" download class="download-btn" title="Download original XLSX">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>.xlsx</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Spreadsheet Grid -->
+    <div class="grid-wrapper" id="gridWrapper">
+        <!-- Corner cell (row/col intersection) -->
+        <div class="corner-cell"></div>
+        <!-- Column letter headers -->
+        <div class="col-header-track" id="colHeaderTrack">
+            <div class="col-headers" id="colHeaders"></div>
+        </div>
+        <!-- Row number headers -->
+        <div class="row-header-track" id="rowHeaderTrack">
+            <div class="row-headers" id="rowHeaders"></div>
+        </div>
+        <!-- The actual cell grid -->
+        <div class="grid-viewport" id="gridViewport">
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Loading market data...</p>
+            </div>
+            <table id="dataTable"></table>
+        </div>
+    </div>
+
+    <!-- Bottom sheet tabs (Excel-style) -->
+    <div class="sheet-tabs-bar">
+        <div class="sheet-tabs-nav">
+            <button class="nav-arrow" id="tabScrollLeft" title="Scroll tabs left">&#9664;</button>
+            <button class="nav-arrow" id="tabScrollRight" title="Scroll tabs right">&#9654;</button>
+        </div>
+        <div class="sheet-tabs-scroll" id="sheetTabsScroll">
+            <div class="sheet-tabs" id="sheetTabs"></div>
+        </div>
+        <div class="status-bar">
+            <span class="status-text" id="statusText">Ready</span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
